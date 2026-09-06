@@ -1,10 +1,1008 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f8f5ef;
 }
 
-h1 {
+.navbar {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    background-color: white;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #d9822b;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: #333;
+}
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background-color: #f8f5ef;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-small-text {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #d9822b;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.05;
+    color: #2f2f2f;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #d9822b;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #b9671d;
+}
+
+.btn-secondary {
+    border: 2px solid #d9822b;
+    color: #d9822b;
+}
+
+.btn-secondary:hover {
+    background-color: #d9822b;
+    color: white;
+}
+
+.hero-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    object-fit: contain;
+}
+/* =========================
+   PET CATEGORIES
+========================= */
+
+.pet-categories {
+    padding: 100px 80px;
+    background-color: white;
+}
+
+
+/* Section Heading */
+
+.section-heading {
     text-align: center;
-    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.section-small-text {
+    color: #d9822b;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    color: #2f2f2f;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+    font-size: 17px;
+}
+
+
+/* Pet Grid */
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Pet Card */
+
+.pet-card {
+    background-color: #f8f5ef;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+/* Card Hover */
+
+.pet-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Pet Image */
+
+.pet-image {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.pet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Card Heading */
+
+.pet-card h3 {
+    font-size: 24px;
+    color: #2f2f2f;
+    margin-bottom: 10px;
+}
+
+
+/* Card Description */
+
+.pet-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+
+/* Explore Link */
+
+.pet-card a {
+    color: #d9822b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pet-card a:hover {
+    text-decoration: underline;
+}
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-us {
+    padding: 100px 80px;
+    background-color: #f8f5ef;
+}
+
+
+/* Features Grid */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Feature Card */
+
+.feature-card {
+    background-color: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+
+/* Feature Card Hover */
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Icon */
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+/* Heading */
+
+.feature-card h3 {
+    font-size: 21px;
+    color: #2f2f2f;
+    margin-bottom: 12px;
+}
+
+
+/* Description */
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #777;
+}
+/* =========================
+   POPULAR PRODUCTS
+========================= */
+
+.products {
+    padding: 100px 80px;
+    background-color: white;
+}
+
+
+/* Product Grid */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Product Card */
+
+.product-card {
+    background-color: #f8f5ef;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Product Image */
+
+.product-image {
+    height: 280px;
+    background-color: #f1ede4;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+
+/* Product Image */
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Badge */
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background-color: #d9822b;
+    color: white;
+
+    padding: 7px 11px;
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* Wishlist */
+
+.wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* Product Information */
+
+.product-info {
+    padding: 22px;
+}
+
+
+/* Category */
+
+.product-category {
+    color: #d9822b;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Product Name */
+
+.product-info h3 {
+    color: #2f2f2f;
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Rating */
+
+.rating {
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.rating span {
+    color: #777;
+    margin-left: 5px;
+}
+
+
+/* Bottom */
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Price */
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2f2f2f;
+}
+
+
+/* Cart Button */
+
+.cart-btn {
+    border: none;
+
+    background-color: #2f2f2f;
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    background-color: #d9822b;
+}
+
+
+/* View All */
+
+.products-button {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.view-all-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #d9822b;
+
+    font-weight: bold;
+
+    border: 2px solid #d9822b;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.view-all-btn:hover {
+    background-color: #d9822b;
+    color: white;
+}
+/* =========================
+   OUR SERVICES
+========================= */
+
+.services {
+    padding: 100px 80px;
+    background-color: #f8f5ef;
+}
+
+
+/* Services Grid */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Service Card */
+
+.service-card {
+    background-color: white;
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Hover */
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Icon */
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+/* Heading */
+
+.service-card h3 {
+    font-size: 21px;
+    color: #2f2f2f;
+
+    margin-bottom: 12px;
+}
+
+
+/* Description */
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+
+/* Learn More */
+
+.service-card a {
+    color: #d9822b;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.service-card a:hover {
+    text-decoration: underline;
+}
+/* =========================
+   ABOUT PAWBITE
+========================= */
+
+.about {
+    padding: 100px 80px;
+
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    background-color: white;
+
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* About Image */
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 550px;
+
+    display: block;
+
+    border-radius: 25px;
+}
+
+
+/* About Content */
+
+.about-content {
+    width: 50%;
+}
+
+
+/* Heading */
+
+.about-content h2 {
+    font-size: 48px;
+    line-height: 1.15;
+
+    color: #2f2f2f;
+
+    margin-bottom: 25px;
+}
+
+
+/* Description */
+
+.about-description {
+    color: #666;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    max-width: 550px;
+
+    margin-bottom: 15px;
+}
+
+
+/* About Features */
+
+.about-features {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+
+/* Feature */
+
+.about-feature {
+    font-size: 15px;
+
+    color: #444;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* Check Mark */
+
+.about-feature span {
+    color: #d9822b;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+/* Button */
+
+.about-btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background-color: #d9822b;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+/* Button Hover */
+
+.about-btn:hover {
+    background-color: #b9671d;
+}
+
+/* =========================
+   CUSTOMER REVIEWS
+========================= */
+
+.reviews {
+    padding: 100px 80px;
+    background-color: #f8f5ef;
+}
+
+
+/* Reviews Grid */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Review Card */
+
+.review-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Hover */
+
+.review-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Customer Information */
+
+.review-top {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Avatar */
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background-color: #f1ede4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* Customer Name */
+
+.review-top h3 {
+    color: #2f2f2f;
+
+    font-size: 17px;
+
+    margin-bottom: 4px;
+}
+
+
+/* Pet Type */
+
+.review-top p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* Stars */
+
+.review-stars {
+    font-size: 16px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Review Text */
+
+.review-text {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   SPECIAL OFFER
+========================= */
+
+.special-offer {
+    margin: 80px;
+
+    padding: 70px 80px;
+
+    background-color: #2f2f2f;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+
+/* Offer Content */
+
+.offer-content {
+    max-width: 600px;
+}
+
+
+/* Small Text */
+
+.offer-small-text {
+    color: #d9822b;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Heading */
+
+.offer-content h2 {
+    color: white;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+
+/* Description */
+
+.offer-description {
+    color: #ddd;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* Discount */
+
+.offer-description strong {
+    color: #d9822b;
+}
+
+
+/* Button */
+
+.offer-btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background-color: #d9822b;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.offer-btn:hover {
+    background-color: #b9671d;
+
+    transform: translateY(-3px);
+}
+
+
+/* Pet Icons */
+
+.offer-pets {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Pet Circle */
+
+.pet-circle {
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 45px;
+
+    transition: 0.3s;
+}
+
+
+/* Pet Circle Hover */
+
+.pet-circle:hover {
+    transform: scale(1.1);
 }
