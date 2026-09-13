@@ -28,7 +28,7 @@
     </nav>
 
     <div class="nav-buttons">
-        <a href="">♡</a>
+        <a href="wishlist.html">♡</a>
         <a href="cart.html">🛒</a>
         <a href="#">Login</a>
     </div>
@@ -269,18 +269,20 @@
         <!-- Product 1 -->
         <div class="product-card">
 
-            <div class="product-image">
+            <div class="product-image"> 
 
-                <span class="product-badge">BEST SELLER</span>
+    <span class="product-badge">BEST SELLER</span> 
 
-                <button class="wishlist-btn">♡</button>
+    <button class="wishlist-btn" onclick="addToWishlist('dog')">♡</button> 
 
-                <img
-                    src="dog food.jpg"
-                    alt="Premium Dog Food"
-                >
+    <a href="product.html?product=dog">
+        <img 
+            src="dog food.jpg" 
+            alt="Premium Dog Food" 
+        >
+    </a>
 
-            </div>
+</div>
 
             <div class="product-info">
 
@@ -297,9 +299,9 @@
 
                     <span class="price">Rs. 1,299</span>
 
-                    <button class="cart-btn">
-                        Add to Cart
-                    </button>
+                    <button class="cart-btn" onclick="addToCartFromShop('dog')"> 
+    Add to Cart 
+</button>
 
                 </div>
 

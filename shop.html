@@ -44,9 +44,9 @@
 
         <div class="nav-buttons">
 
-            <a href="#">♡</a>
+            <a href="wishlist.html">♡</a>
 
-            <a href="#">🛒</a>
+            <a href="cart.html">🛒</a>
 
             <a href="#">Login</a>
 
@@ -81,31 +81,35 @@
     ========================= -->
 
     <section class="shop-section">
+        <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search pet food..." onkeyup="searchProducts()">
+    <button onclick="searchProducts()">🔍 Search</button>
+</div>
 
 
         <!-- Categories -->
 
         <div class="shop-categories">
 
-            <button class="category-btn active">
-                All
-            </button>
+            <button class="category-btn active" onclick="filterCategory('all')">
+    All
+</button>
 
-            <button class="category-btn">
-                🐶 Dogs
-            </button>
+<button class="category-btn" onclick="filterCategory('dog')">
+    🐶 Dogs
+</button>
 
-            <button class="category-btn">
-                🐱 Cats
-            </button>
+<button class="category-btn" onclick="filterCategory('cat')">
+    🐱 Cats
+</button>
 
-            <button class="category-btn">
-                🐰 Rabbits
-            </button>
+<button class="category-btn" onclick="filterCategory('rabbit')">
+    🐰 Rabbits
+</button>
 
-            <button class="category-btn">
-                🐟 Fish
-            </button>
+<button class="category-btn" onclick="filterCategory('fish')">
+    🐟 Fish
+</button>
 
         </div>
 
@@ -117,7 +121,7 @@
 
             <!-- Product 1 -->
 
-            <div class="shop-product-card">
+            <div class="shop-product-card" data-category="dog">
 
                 <div class="shop-product-image">
 
@@ -125,9 +129,9 @@
                         BEST SELLER
                     </span>
 
-                    <button class="wishlist-btn">
-                        ♡
-                    </button>
+                    <button class="wishlist-btn" onclick="addToWishlist('dog')">
+    ♡
+</button>
                         <a href="product.html?product=dog">
 
 
@@ -160,9 +164,9 @@
                             Rs. 1,299
                         </span>
 
-                        <button class="cart-btn">
-                            Add to Cart
-                        </button>
+                        <button class="cart-btn" onclick="addToCartFromShop('dog')">
+    Add to Cart
+</button>
 
                     </div>
 
@@ -173,7 +177,7 @@
 
             <!-- Product 2 -->
 
-            <div class="shop-product-card">
+            <div class="shop-product-card" data-category="cat">
 
                 <div class="shop-product-image">
 
@@ -181,9 +185,9 @@
                         POPULAR
                     </span>
 
-                    <button class="wishlist-btn">
-                        ♡
-                    </button>
+                    <button class="wishlist-btn" onclick="addToWishlist('cat')">
+    ♡
+</button>
                     <a href="product.html?product=cat">
 
                     <img
@@ -215,9 +219,9 @@
                             Rs. 999
                         </span>
 
-                        <button class="cart-btn">
-                            Add to Cart
-                        </button>
+                        <button class="cart-btn" onclick="addToCartFromShop('cat')">
+    Add to Cart
+</button>
 
                     </div>
 
@@ -228,7 +232,7 @@
 
             <!-- Product 3 -->
 
-            <div class="shop-product-card">
+            <div class="shop-product-card" data-category="rabbit">
 
                 <div class="shop-product-image">
 
@@ -236,9 +240,9 @@
                         HEALTHY
                     </span>
 
-                    <button class="wishlist-btn">
-                        ♡
-                    </button>
+                    <button class="wishlist-btn" onclick="addToWishlist('rabbit')">
+    ♡
+</button>>
                     <a href="product.html?product=rabbit">
 
                     <img
@@ -270,9 +274,9 @@
                             Rs. 699
                         </span>
 
-                        <button class="cart-btn">
-                            Add to Cart
-                        </button>
+                        <button class="cart-btn" onclick="addToCartFromShop('rabbit')">
+    Add to Cart
+</button>
 
                     </div>
 
@@ -283,7 +287,7 @@
 
             <!-- Product 4 -->
 
-            <div class="shop-product-card">
+            <div class="shop-product-card" data-category="fish">
 
                 <div class="shop-product-image">
 
@@ -291,9 +295,9 @@
                         POPULAR
                     </span>
 
-                    <button class="wishlist-btn">
-                        ♡
-                    </button>
+                    <button class="wishlist-btn" onclick="addToWishlist('fish')">
+    ♡
+</button>
                     <a href="product.html?product=fish">
 
                     <img
@@ -325,9 +329,9 @@
                             Rs. 499
                         </span>
 
-                        <button class="cart-btn">
-                            Add to Cart
-                        </button>
+                        <button class="cart-btn" onclick="addToCartFromShop('fish')">
+    Add to Cart
+</button>
 
                     </div>
 
@@ -339,6 +343,8 @@
         </div>
 
     </section>
+
+    <script src="script.js"></script>
 
 
 </body>

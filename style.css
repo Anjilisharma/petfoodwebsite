@@ -1728,3 +1728,41 @@ nav a:hover {
     text-decoration: none;
     border-radius: 8px;
 }
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px auto 40px;
+    max-width: 600px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #d9822b;
+}
+
+.search-box button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #d9822b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #b9671d;
+}
