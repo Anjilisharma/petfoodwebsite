@@ -288,6 +288,13 @@ function filterCategory(category) {
         }
     });
 }
+// Filter shop products when coming from Home page
+const urlParams  = new URLSearchParams(window.location.search);
+const categoryFromURL = urlParams.get("category");
+
+if (categoryFromURL) {
+    filterCategory(categoryFromURL);
+}
 
 // Add product to wishlist
 function addToWishlist(productId) {
