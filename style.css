@@ -2194,3 +2194,361 @@ nav a:hover {
     padding-top: 15px;
     border-top: 1px solid #ddd;
 }
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .hero {
+        padding: 50px 40px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .pet-categories,
+    .why-us,
+    .products,
+    .services,
+    .reviews {
+        padding: 80px 40px;
+    }
+
+    .pet-grid,
+    .features-grid,
+    .product-grid,
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        padding: 80px 40px;
+        gap: 40px;
+    }
+
+    .footer {
+        padding: 60px 40px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    /* Navbar */
+    /* Navbar */
+.navbar {
+    height: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.menu-toggle {
+    display: block !important;
+    margin-left: auto;
+    order: 2;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #222;
+    padding: 5px;
+}
+
+nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    order: 4;
+    background: white;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+}
+
+nav.mobile-menu {
+    display: flex;
+}
+
+nav.mobile-menu a {
+    width: 100%;
+    padding: 12px 10px;
+    box-sizing: border-box;
+}
+
+nav.mobile-menu a:hover {
+    background: #fff5ed;
+}
+
+.nav-buttons {
+    display: none;
+    width: 100%;
+    order: 5;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+}
+
+.nav-buttons.mobile-buttons {
+    display: flex;
+}
+
+.nav-buttons a {
+    width: 100%;
+    padding: 12px 10px;
+    box-sizing: border-box;
+}
+
+.nav-buttons a:hover {
+    background: #fff5ed;
+}
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+
+    /* Section Headings */
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+
+    /* Grids */
+    .pet-categories,
+    .why-us,
+    .products,
+    .services,
+    .reviews {
+        padding: 60px 20px;
+    }
+
+    .pet-grid,
+    .features-grid,
+    .product-grid,
+    .services-grid,
+    .reviews-grid,
+    .nutrition-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* About */
+    .about {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Special Offer */
+    .special-offer {
+        margin: 40px 20px;
+        padding: 50px 25px;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .offer-content h2 {
+        font-size: 34px;
+    }
+
+
+    /* Footer */
+    .footer {
+        padding: 50px 20px 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+
+    /* Shop */
+    .shop-header {
+        padding: 60px 20px;
+    }
+
+    .shop-header h1 {
+        font-size: 38px;
+    }
+
+    .shop-section {
+        padding: 50px 20px;
+    }
+
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Search */
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    /* Product Details */
+    .product-details {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 40px;
+    }
+
+    .product-details-image,
+    .product-details-content {
+        width: 100%;
+    }
+
+    .product-details-image {
+        height: 350px;
+        padding: 30px;
+    }
+
+    .product-details-content h1 {
+        font-size: 36px;
+    }
+
+    .product-actions {
+        flex-direction: column;
+    }
+
+    .details-cart-btn,
+    .buy-now-btn {
+        width: 100%;
+    }
+
+
+    /* Cart */
+    .cart-section {
+        padding: 50px 20px;
+    }
+
+    .cart-section h1 {
+        font-size: 32px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .cart-total {
+        text-align: center;
+    }
+
+
+    /* Contact */
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    /* Login & Checkout */
+    .login-page,
+    .checkout-page {
+        padding: 30px 15px;
+    }
+
+    .login-box,
+    .checkout-box {
+        width: 100%;
+        padding: 30px 20px;
+    }
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #222;
+}

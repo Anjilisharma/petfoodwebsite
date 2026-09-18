@@ -495,3 +495,11 @@ function placeOrder(event) {
 
     window.location.href = "index.html";
 }
+
+function toggleMenu() {
+    let nav = document.querySelector("nav");
+    let buttons = document.querySelector(".nav-buttons");
+
+    nav.classList.toggle("mobile-menu");
+    buttons.classList.toggle("mobile-buttons");
+}
