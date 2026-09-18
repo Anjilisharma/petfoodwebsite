@@ -199,10 +199,9 @@ cart.forEach(function(item, index) {
             <div class="cart-total">
 
                 <h2>Total: Rs. ${total.toLocaleString()}</h2>
-
-                <button class="checkout-btn">
-                    Proceed to Checkout 🛍️
-                </button>
+<button class="checkout-btn" onclick="goToCheckout()">
+    Proceed to Checkout 🛍️
+</button>
 
             </div>
         `;
@@ -276,9 +275,9 @@ function searchProducts() {
 }
 // Filter products by category
 function filterCategory(category) {
-    let products = document.querySelectorAll(".shop-product-card");
+    let productCards = document.querySelectorAll(".shop-product-card");
 
-    products.forEach(function(product) {
+    productCards.forEach(function(product) {
         let productCategory = product.getAttribute("data-category");
 
         if (category === "all" || productCategory === category) {
@@ -288,13 +287,17 @@ function filterCategory(category) {
         }
     });
 }
-// Filter shop products when coming from Home page
-const urlParams  = new URLSearchParams(window.location.search);
-const categoryFromURL = urlParams.get("category");
+function filterCategoryFromURL() {
+    let category = new URLSearchParams(window.location.search).get("category");
 
-if (categoryFromURL) {
-    filterCategory(categoryFromURL);
+    if (category) {
+        filterCategory(category);
+    }
 }
+if (document.querySelector(".shop-product-card")) {
+    filterCategoryFromURL();
+}
+
 
 // Add product to wishlist
 function addToWishlist(productId) {
@@ -388,4 +391,107 @@ function addToCartFromShop(productId) {
     alert(product.name + " has been added to your cart! 🛒");
 
    
+}
+
+function createAccount(event) {
+    event.preventDefault();
+
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirm-password").value;
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    alert("Account created successfully!");
+
+    window.location.href = "login.html";
+}
+function resetPassword(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("email").value;
+
+    alert("A password reset link has been sent to " + email);
+
+    window.location.href = "login.html";
+}
+
+function loginUser(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (email === "" || password === "") {
+        alert("Please enter your email and password.");
+        return;
+    }
+
+    alert("Login successful!");
+
+    window.location.href = "index.html";
+}
+
+function togglePassword() {
+    let password = document.getElementById("password");
+    let button = document.querySelector(".password-box button");
+
+    if (password.type === "password") {
+        password.type = "text";
+        button.textContent = "🙈";
+    } else {
+        password.type = "password";
+        button.textContent = "👁️";
+    }
+}
+
+function goToCheckout() {
+    window.location.href = "checkout.html";
+}
+
+function loadCheckout() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let checkoutItems = document.getElementById("checkout-items");
+    let checkoutTotal = document.getElementById("checkout-total");
+
+    if (cart.length === 0) {
+        checkoutItems.innerHTML = "<p>Your cart is empty.</p>";
+        checkoutTotal.textContent = "Total: Rs. 0";
+        return;
+    }
+
+    let total = 0;
+
+    cart.forEach(function(item) {
+        let price = parseInt(item.price.replace(/[^0-9]/g, ""));
+        let quantity = item.quantity || 1;
+        let itemTotal = price * quantity;
+
+        total += itemTotal;
+
+        checkoutItems.innerHTML += `
+            <div class="checkout-item">
+                <span>${item.name} × ${quantity}</span>
+                <span>Rs. ${itemTotal.toLocaleString()}</span>
+            </div>
+        `;
+    });
+
+    checkoutTotal.textContent = `Total: Rs. ${total.toLocaleString()}`;
+}
+
+if (document.getElementById("checkout-items")) {
+    loadCheckout();
+}
+function placeOrder(event) {
+    event.preventDefault();
+
+    alert("🎉 Your order has been placed successfully!");
+
+    localStorage.removeItem("cart");
+
+    window.location.href = "index.html";
 }

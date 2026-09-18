@@ -1904,3 +1904,293 @@ nav a:hover {
 .contact-form button:hover {
     opacity: 0.85;
 }
+
+/* ==============================
+   LOGIN PAGE
+================================ */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fffaf5;
+    padding: 40px 20px;
+}
+
+.login-box {
+    width: 420px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.login-box h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.login-box > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+.login-form input:focus {
+    border-color: #222;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.login-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.login-options a {
+    text-decoration: none;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-form button:hover {
+    opacity: 0.85;
+}
+
+.register-text {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-text a {
+    text-decoration: none;
+    font-weight: 600;
+}
+.back-home {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.back-home a {
+    text-decoration: none;
+    color: #555;
+}
+
+.back-home a:hover {
+    text-decoration: underline;
+}
+
+.password-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.password-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 45px 13px 13px !important;
+    margin-bottom: 0 !important;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.password-box input:focus {
+    border-color: #222;
+}
+
+.password-box button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto !important;
+    height: auto;
+    padding: 4px !important;
+    margin: 0 !important;
+    border: none;
+    background: transparent !important;
+    color: #222;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* ==============================
+   CHECKOUT PAGE
+================================ */
+
+.checkout-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fffaf5;
+    padding: 50px 20px;
+}
+
+.checkout-box {
+    width: 500px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-box h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.checkout-box h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.checkout-box > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form label {
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus,
+.checkout-form select:focus {
+    border-color: #222;
+}
+
+.checkout-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.checkout-form button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-form button:hover {
+    opacity: 0.85;
+}
+
+.checkout-box .back-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-box .back-home a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.checkout-box .back-home a:hover {
+    text-decoration: underline;
+}
+.checkout-summary {
+    background: #fffaf5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.checkout-summary h3 {
+    margin-bottom: 15px;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#checkout-total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
