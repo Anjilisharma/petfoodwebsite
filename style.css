@@ -2302,18 +2302,24 @@ nav.mobile-menu a:hover {
 }
 
 .nav-buttons {
-    display: none;
+    display: flex;
     width: 100%;
     order: 5;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
     border-top: 1px solid #eee;
-    padding-top: 5px;
+    padding-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
 }
 
 .nav-buttons.mobile-buttons {
-    display: flex;
+    max-height: 200px;
+    padding-top: 5px;
+    opacity: 1;
 }
 
 .nav-buttons a {
