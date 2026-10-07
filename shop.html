@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop - PawBite</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🐾 PawBite
+        </div> 
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="shop.html">Shop</a>
+<a href="index.html#services">Services</a>
+<a href="index.html#nutrition">Nutrition</a>
+<a href="index.html#about">About</a>
+<a href="index.html#contact">Contact</a>
+
+        </nav>
+
+        <div class="nav-buttons">
+
+            <a href="wishlist.html">♡</a>
+
+            <a href="cart.html">🛒</a>
+
+            <a href="login.html">Login</a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         SHOP HERO
+    ========================= -->
+
+    <section class="shop-header">
+
+        <p class="section-small-text">
+            PAWBITE STORE
+        </p>
+
+        <h1>
+            Shop Pet Food
+        </h1>
+
+        <p>
+            Healthy and delicious food for every pet.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         SHOP CONTENT
+    ========================= -->
+
+    <section class="shop-section">
+        <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search pet food..." onkeyup="searchProducts()">
+    <button onclick="searchProducts()">🔍 Search</button>
+</div>
+
+
+        <!-- Categories -->
+
+        <div class="shop-categories">
+
+            <button class="category-btn active" onclick="filterCategory('all')">
+    All
+</button>
+
+<button class="category-btn" onclick="filterCategory('dog')">
+    🐶 Dogs
+</button>
+
+<button class="category-btn" onclick="filterCategory('cat')">
+    🐱 Cats
+</button>
+
+<button class="category-btn" onclick="filterCategory('rabbit')">
+    🐰 Rabbits
+</button>
+
+<button class="category-btn" onclick="filterCategory('fish')">
+    🐟 Fish
+</button>
+
+        </div>
+
+
+        <!-- Products -->
+
+        <div class="shop-grid">
+
+
+            <!-- Product 1 -->
+
+            <div class="shop-product-card" data-category="dog">
+
+                <div class="shop-product-image">
+
+                    <span class="product-badge">
+                        BEST SELLER
+                    </span>
+
+                    <button class="wishlist-btn" onclick="addToWishlist('dog')">
+    ♡
+</button>
+                        <a href="product.html?product=dog">
+
+
+                    <img
+                        src="dog food.jpg"
+                        alt="Premium Dog Food"
+                    >
+                </a>
+
+                </div>
+
+                <div class="shop-product-info">
+
+                    <p class="product-category">
+                        DOG FOOD
+                    </p>
+
+                    <h3>
+                        Premium Chicken Dog Food
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                        <span>(24)</span>
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Rs. 1,299
+                        </span>
+
+                        <button class="cart-btn" onclick="addToCartFromShop('dog')">
+    Add to Cart
+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div class="shop-product-card" data-category="cat">
+
+                <div class="shop-product-image">
+
+                    <span class="product-badge">
+                        POPULAR
+                    </span>
+
+                    <button class="wishlist-btn" onclick="addToWishlist('cat')">
+    ♡
+</button>
+                    <a href="product.html?product=cat">
+
+                    <img
+                        src="cat food.jpg"
+                        alt="Premium Cat Food"
+                    >
+                    </a>
+
+                </div>
+
+                <div class="shop-product-info">
+
+                    <p class="product-category">
+                        CAT FOOD
+                    </p>
+
+                    <h3>
+                        Premium Salmon Cat Food
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                        <span>(18)</span>
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Rs. 999
+                        </span>
+
+                        <button class="cart-btn" onclick="addToCartFromShop('cat')">
+    Add to Cart
+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div class="shop-product-card" data-category="rabbit">
+
+                <div class="shop-product-image">
+
+                    <span class="product-badge">
+                        HEALTHY
+                    </span>
+
+                    <button class="wishlist-btn" onclick="addToWishlist('rabbit')">
+    ♡
+</button>
+                    <a href="product.html?product=rabbit">
+
+                    <img
+                        src="rabbit food.jpg"
+                        alt="Rabbit Food"
+                    >
+                    </a>
+
+                </div>
+
+                <div class="shop-product-info">
+
+                    <p class="product-category">
+                        RABBIT FOOD
+                    </p>
+
+                    <h3>
+                        Healthy Rabbit Pellets
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                        <span>(16)</span>
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Rs. 699
+                        </span>
+
+                        <button class="cart-btn" onclick="addToCartFromShop('rabbit')">
+    Add to Cart
+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 4 -->
+
+            <div class="shop-product-card" data-category="fish">
+
+                <div class="shop-product-image">
+
+                    <span class="product-badge">
+                        POPULAR
+                    </span>
+
+                    <button class="wishlist-btn" onclick="addToWishlist('fish')">
+    ♡
+</button>
+                    <a href="product.html?product=fish">
+
+                    <img
+                        src="fish food.jpg"
+                        alt="Fish Food"
+                    >
+                    </a>
+
+                </div>
+
+                <div class="shop-product-info">
+
+                    <p class="product-category">
+                        FISH FOOD
+                    </p>
+
+                    <h3>
+                        Premium Fish Food Flakes
+                    </h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                        <span>(21)</span>
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <span class="price">
+                            Rs. 499
+                        </span>
+
+                        <button class="cart-btn" onclick="addToCartFromShop('fish')">
+    Add to Cart
+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
